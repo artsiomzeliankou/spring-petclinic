@@ -76,7 +76,7 @@ public class VisitControllerTests {
         mockMvc.perform(get("/owners/*/pets/{petId}/visits", TEST_PET_ID))
             .andExpect(status().isOk())
             .andExpect(model().attributeExists("visits"))
-            .andExpect(view().name("testFail!"));//visitList
+            .andExpect(view().name("visitList"));
     }
 
 
